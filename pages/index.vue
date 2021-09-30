@@ -2,12 +2,12 @@
   <ul>
     <li>
       <nuxt-link :to="`/news/`">
-        newsページだよ
+        newsページだよ！
       </nuxt-link>
     </li>
     <li>      
       <nuxt-link :to="`/detail/`">
-        detailページだよ
+        detailページだよ！
       </nuxt-link>
     </li>
   </ul>

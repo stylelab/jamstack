@@ -2,6 +2,12 @@
 
 URL:https://friendly-mcnulty-dbf75c.netlify.app
 
+hosting: netlify(Accenture)なぜｗ
+
+cms: microCMS(JamStackTest)
+
+repogitory: gitHub(jamstack_test)
+
 ## Build Setup
 
 ```bash
