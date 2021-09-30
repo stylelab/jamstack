@@ -1,5 +1,7 @@
 # jamstack_test
 
+URL:https://friendly-mcnulty-dbf75c.netlify.app
+
 ## Build Setup
 
 ```bash
