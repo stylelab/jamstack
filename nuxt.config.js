@@ -38,24 +38,35 @@ export default {
   build: {},
 
   generate: {
-    dir: "gh_pages", // gh_pages/ instead of dist/
-    subFolders: false // HTML files are generated according to the route path
-  }
+    dir:'public',
+    async routes() {
+      const pages = await axios
+        .get("https://stylelab-jamstacktest.microcms.io/api/v1/news", {
+          headers: { "X-API-KEY": "e0c83144-fb8b-4ddc-84cd-e0ecd86a7337" }
+        })
+        .then(res =>
+          res.data.contents.map(content => ({
+            route: `/news/${content.id}`,
+            payload: content
+          }))
+        );
+      return pages;
+    },
 
-  // generate: {
-  //   async routes() {
-  //     const pages = await axios
-  //       .get("https://stylelab-jamstacktest.microcms.io/api/v1/news", {
-  //         headers: { "X-API-KEY": "e0c83144-fb8b-4ddc-84cd-e0ecd86a7337" }
-  //       })
-  //       .then(res =>
-  //         res.data.contents.map(content => ({
-  //           route: `/${content.id}`,
-  //           payload: content
-  //         }))
-  //       );
-  //     console.log(12);
-  //     return pages;
-  //   }
-  // }
+    async routes() {
+      const pages = await axios
+        .get("https://stylelab-jamstacktest.microcms.io/api/v1/detail", {
+          headers: { "X-API-KEY": "e0c83144-fb8b-4ddc-84cd-e0ecd86a7337" }
+        })
+        .then(res =>
+          res.data.contents.map(content => ({
+            route: `/detail/${content.id}`,
+            payload: content
+          }))
+        );
+      return pages;
+    }
+
+
+  }
 };
