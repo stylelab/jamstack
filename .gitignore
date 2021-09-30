@@ -12,6 +12,7 @@ yarn-error.log*
 node_modules
 .nuxt
 
+
 # Runtime data
 
 pids
