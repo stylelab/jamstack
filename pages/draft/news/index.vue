@@ -1,7 +1,7 @@
 <template>
   <main class="main">
-    <h1 class="title">{{ title }}</h1>
-    <p class="publishedAt">{{ publishedAt }}</p>
+    <h1 class="title">{{ data.title }}</h1>
+    <p class="publishedAt">{{ data.publishedAt }}</p>
   </main>
 </template>
 
