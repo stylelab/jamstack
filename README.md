@@ -8,7 +8,7 @@ cms: microCMS(JamStackTest)
 
 repogitory: gitHub(jamstack_test)
 
-
+test
 
 
 ## Build Setup
